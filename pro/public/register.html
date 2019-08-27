@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"> 
+	<title>Document</title>
+	<style>
+	  *{margin:0;padding:0;}
+	  .container{
+		  width:80%;
+		  height:700px;
+		  background:url(img/login08.jpg) no-repeat center center;
+			background-size:100% 700px;
+			position:relative;
+			margin:0 auto;
+		}
+		.register{
+		  width:500px;
+			height:500px;
+			position:absolute;
+			background:#ddd;
+			background:rgba(0,0,0,0.5);
+			right:100px;
+			top:100px;
+		}
+     .register div{
+		   margin:25px 10px 0;
+		 }
+     #uname,#upwd,#upwdconfirm,#phone,#email{
+		   padding:10px;
+			 width:50%;
+		 }
+      .register p,.now_login{
+			   font-size:24px;
+			   font-weight:bold;
+			}
+		.register p{
+			padding:20px;
+			color:white;
+		}
+		.now_login{
+		  position:absolute;
+			top:20px;
+			right:20px;
+			text-decoration:none;
+			color:#dfa;
+		}
+		.register label{
+		   display:inline-block;
+		   width:80px;
+			 text-align:right;
+			 color:#fff;
+			 }
+    .register div{position:relative;}
+		span{
+		  position:absolute;
+		  right:10px;top:10px;
+		}
+		.txt_focus{
+	      box-shadow:3px 3px 50px 3px #f00;
+          }
+		
+		.button-submit,.button-reset{
+		  background:rgb(109,185,61);
+			color:#fff;
+			padding:10px 20px;
+			border:0px;
+			position:absolute;
+			margin-top:40px;
+		}
+		.button-submit{
+		  left:100px;
+		}
+		.button-reset{
+		  right:100px;
+		}
+		.vali_info{display:none;}
+		.vali_success{display:block;color:green;}
+		.vali_fail{display:block; color:red;}
+	</style>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/register.js"></script>
+</head>
+<body>
+	 <div class="container">
+	     <div class="register">
+			   <form action="">
+				   <p>新用户注册</p>
+					 <a class="now_login" href="login.html">直接登录</a>
+					 <div>
+					    <label for="uname">用户名：</label>
+					    <input id="uname" type="text" placeholder="请输入4~8位字母" autocomplete="off"> 
+					    <span class="vali_info">格式输入正确</span><span class="vali_info">格式输入错误</span>
+					 </div>
+					 <div>
+					    <label for="upwd">密码：</label>
+					    <input id="upwd" type="password" placeholder="请输入6~8位数字或字母"> <span class="vali_info">格式输入正确</span><span class="vali_info">格式输入错误</span>
+					 </div>
+					 <div>
+					    <label for="upwdconfirm">确认密码：</label>
+					    <input id="upwdconfirm" type="password" placeholder="请输入6~8位数字或字母">
+					    <span class="vali_info">格式输入正确</span><span class="vali_info">密码输入不一致</span>
+						</div>
+					 <div>
+					    <label for="phone">电话号码：</label>
+					    <input id="phone" type="tel" placeholder="请输入11位数字" autocomplete="off">
+					    <span class="vali_info">格式输入正确</span><span class="vali_info">格式输入错误</span>
+					 </div>
+					 <div>
+					    <label for="email">邮箱：</label>
+					    <input id="email" type="tel" placeholder="请输入正确格式" autocomplete="off">
+					    <span class="vali_info">格式输入正确</span><span class="vali_info">格式输入错误</span>
+					 </div>
+					 <input class="button-submit" type="button" value="立即注册">
+					 <input class="button-reset" type="reset" value="重新填写">
+				 </form>
+			 </div>
+			 
+	 </div>
+	 <script>
+	 //查找触发事件
+	     var txtName=document.getElementById("uname");
+	     var txtUpwd=document.getElementById("upwd");
+	     var txtUpwdconfirm=document.getElementById("upwdconfirm");
+	     var txtPhone=document.getElementById("phone");
+	     var txtemail=document.getElementById("email");
+
+		//绑定事件处理函数，获取焦点时
+		   txtName.onfocus=txtUpwd.onfocus=txtUpwdconfirm.onfocus=txtPhone.onfocus=txtemail.onfocus=function(){
+			   var txt=this;
+				 txt.className="txt_focus";
+			   var span1=txt.nextElementSibling;
+         var span2=txt.parentNode.lastElementChild;
+				 span1.className=span2.className="vali_info";
+			 }
+			 //失去焦点时
+       txtName.onblur=function(){
+			    var txt=this;
+					txt.className="";
+         var reg=/^[a-z]{4,8}$/;
+         	 var span1=txt.nextElementSibling;
+         var span2=txt.parentNode.lastElementChild;
+				 if(reg.test(txt.value)==true){
+					 span1.className="vali_success";   
+				 }else{
+				   span2.className="vali_fail";
+				 }
+			 }
+			 //
+			 txtUpwd.onblur=function(){
+			    var txt=this;
+					txt.className="";
+         var reg=/^[0-9A-Za-z]{6,8}$/;
+         	 var span1=txt.nextElementSibling;
+         var span2=txt.parentNode.lastElementChild;
+				 if(reg.test(txt.value)==true){
+					 span1.className="vali_success";   
+				 }else{
+				   span2.className="vali_fail";
+				 }
+			 }
+			 //
+			 txtUpwdconfirm.onblur=function(){
+			    var txt=this;
+					txt.className="";
+            var prev=txt.parentNode.previousElementSibling.children[1];
+         	 var span1=txt.nextElementSibling;
+         var span2=txt.parentNode.lastElementChild;
+				 if(txt.value==prev.value&&txt.value!=""){
+					 span1.className="vali_success";   
+				 }else{
+				   span2.className="vali_fail";
+				 }
+			 }
+			 //
+			 txtPhone.onblur=function(){
+			    var txt=this;
+					txt.className="";
+         var reg=/1[3-9]\d{9}/;
+         	 var span1=txt.nextElementSibling;
+         var span2=txt.parentNode.lastElementChild;
+				 if(reg.test(txt.value)==true){
+					 span1.className="vali_success";   
+				 }else{
+				   span2.className="vali_fail";
+				 }
+			 }
+			 //
+			 txtemail.onblur=function(){
+			    var txt=this;
+					txt.className="";
+         var reg=/[0-9A-Za-z]@[0-9A-Za-z]/;
+         	 var span1=txt.nextElementSibling;
+         var span2=txt.parentNode.lastElementChild;
+				 if(reg.test(txt.value)==true){
+					 span1.className="vali_success";   
+				 }else{
+				   span2.className="vali_fail";
+				 }
+			 }
+	 </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/index.js"></script>
+</head>
+<body>
+<header></header>
+<div class="container">
+  <h3>首页</h3>
+	<hr style="margin:5px 0 10px 0">
+	<div class="lunbo" >
+	    <ul class="lunbo-img">
+			  <li><img src="img/lunbo11.jpg" alt=""></li>
+			  <li><img src="img/lunbo04.jpg" alt=""></li>
+			  <li><img src="img/lunbo01.jpg" alt=""></li>
+			  <li><img src="img/lunbo03.jpg" alt=""></li>
+			</ul>
+			<a class="ck-side ck-left" href="#"></a>
+			<a class="ck-side ck-right" href="#"></a>
+      <ul class="lunbo-footer">
+			  <li class="active" count="0"></li>
+			  <li count="1"></li>
+			  <li count="2"></li>
+			  <li count="3"></li>
+			</ul> 
+	</div>
+	<div class="index-product">
+	   <img src="img/louceng.jpg" alt="">
+	   <span>经典爆款</span>
+		 <hr>
+	</div>
+	<a href="#"><h3>辣条>></h3></a>
+	<div class="index-img louceng01">
+	   <!-- <div class="louceng">
+			 <img src="img/latiao01.jpg" alt="">
+			<p>火爆鸡精</p>
+			<div class="index-price">
+			  零售价：0.5￥
+			</div>
+		</div>
+		<div class="louceng">
+		 <img src="img/latiao02.jpg" alt="">
+			<p>小滑头</p>
+			<div class="index-price">
+			  零售价：0.5￥
+			</div>
+		</div>
+		<div class="louceng">
+		  <img src="img/latiao03.jpg" alt="">
+			<p>北京烤鸭</p>
+			<div class="index-price">
+			  零售价：0.5￥
+			</div>
+		</div> -->
+	</div>
+	<a href="#"><h3>饼干>></h3></a>
+	<div class="index-img louceng02">
+	  <!-- <div class="louceng">
+		  <img src="img/shipin08.png" alt="">
+			<p>熊仔饼</p>
+			<div class="index-price">
+			  零售价：3￥
+			</div>
+		</div>
+		<div class="louceng">
+		  <img src="img/shipin12.jpg" alt="">
+			<p>好吃点</p>
+			<div class="index-price">
+			  零售价：5￥
+			</div>
+		</div>
+		<div class="louceng">
+		  <img src="img/shipin03.jpg" alt="">
+			<p>小馒头</p>
+			<div class="index-price">
+			  零售价：6￥
+			</div>
+		</div> -->
+	</div>
+	<a href="#"><h3>饮料>></h3></a>
+	<div class="index-img louceng03">
+	  <!-- <div class="louceng">
+		  <img src="img/yinliao04.jpg" alt="">
+			<p>冰糖雪梨</p>
+			<div class="index-price">
+			  零售价：3￥
+			</div>
+		</div>
+		<div class="louceng">
+		  <img src="img/yinliao05.jpg" alt="">
+			<p>可口可乐</p>
+			<div class="index-price">
+			  零售价：3￥
+			</div>
+		</div>
+		<div class="louceng">
+		  <img src="img/yinliao06.jpg" alt="">
+			<p>红牛</p>
+			<div class="index-price">
+			  零售价：6￥
+			</div>
+		</div> -->
+	</div>
+	<div class="index-foot">
+	  <span>还有更多美食等你来发现>></span>
+	</div>
+ 
+    <ul class="navbar">
+			<li class="item"> <a>辣条</a> </li>
+			<li class="item"> <a>小吃</a> </li>
+			<li class="item"> <a>饮料</a> </li>
+		</ul>
+
+
+</div>
+<footer id="footer">
+  <iframe class="my_footer" src="footer.html" frameborder="0"></iframe>
+</footer>
+  <script src="js/jquery-1.11.3.js"></script>
+	<script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+<script>
+    //轮播图
+	  var moved=0;
+		var imgWidth=1200;
+		var ul=document.getElementsByClassName("lunbo-img")[0];
+		//console.log(ul)
+		var lunbo=document.getElementsByClassName("lunbo")[0];
+	//	console.log(lunbo)
+    var left=document.getElementsByClassName("ck-left")[0];
+		var right=document.getElementsByClassName("ck-right")[0];
+		var button=document.querySelectorAll(".lunbo-footer>li");
+		//console.log(button);
+		function task(){
+		  moved--;
+			if(moved<-3){moved=0}
+			ul.style.left=(moved*imgWidth)+"px";
+			showbutton();
+		}
+		var timer=setInterval(task,2000);
+     lunbo.onmouseover=function(){
+		   clearInterval(timer);
+			 timer=null;
+		}
+		 lunbo.onmouseout=function(){
+		   timer=setInterval(task,2000);
+		 }
+		 left.onclick=function(){
+		   task();
+		 }
+		 right.onclick=function(){
+		   moved++;
+			 if(moved>0){moved=-3}
+			 ul.style.left=(moved*imgWidth)+"px";
+			 showbutton();
+		 }
+		 function showbutton(){
+		    var index=Math.abs(moved);
+				for(var i=0;i<button.length;i++){
+				  if(button[i].className=="active"){
+					  button[i].className="";
+					}
+				}
+				button[index].className="active";
+		 }
+		 for(var i=0;i<button.length;i++){
+			 button[i].onclick=function(){
+				 for(var k=0;k<button.length;k++){
+				   if(button[k].className="active"){
+					   button[k].className="";
+					 }
+				 }
+//		   if(button[i].className=="active"){
+//			     button[i].className="";
+//			   }
+			 this.className="active";
+			 var num=parseInt(this.getAttribute("count"));
+        ul.style.left=-(num*imgWidth)+"px";
+		   }
+		 }
+
+		 //楼层滚动
+		 var $navbar=$(".navbar");
+		 var $floors=$(".index-img");
+
+		 $(window).scroll(function(){
+		  if($(window).scrollTop()>=164){
+				$navbar.show();
+				$floors.each(function(i,f){
+					var $f=$(f);
+					var offsetTop=$f.offset().top;
+					if(offsetTop-innerHeight/2<=$(window).scrollTop()){
+					  $navbar.children(`.item:eq(${i})`).addClass("hover").siblings().removeClass("hover")
+					}
+				})
+			}else{
+			  $navbar.hide()
+			}
+		})
+		
+		$navbar.on("click",".item",function(){
+		  var i=$(this).index()
+			var offsetTop=$($floors[i]).offset().top-100;
+			$("html").stop(true).animate({
+			  scrollTop:offsetTop
+			},1000)
+		})
+		
+	</script>
+</body>
+</html>

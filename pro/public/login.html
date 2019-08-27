@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	  *{margin:0;padding:0;}
+	  .container{
+		  width:100%;
+		  height:700px;
+		  background:url(img/login08.jpg) no-repeat center center;
+			background-size:80% 700px;
+			position:relative
+		}
+		.login{
+		  width:400px;height:400px;
+			background:#ddd;
+			background:rgba(0,0,0,0.5);
+			position:absolute;
+			right:200px;
+			top:200px;
+			color:rgb(109,185,61);
+		}
+	  .login p{
+		  font-size:24px;
+		  color:white;
+			font-weight:bold;
+			text-align:center;
+			padding:20px;
+		}
+		.uname,.upwd{
+		  width:80%;
+			padding:10px;
+			margin:25px 30px;
+		  border:0px;
+		}
+		.uname{
+		  background:#fff url(img/login_use.png) no-repeat center right;
+			background-size:15%;
+		}
+    .upwd{
+		  background:#fff url(img/login_upwd.png) no-repeat center right;
+			background-size:15%;
+		}
+		#re-upwd,#re-login{
+		  margin-left:80px;
+		}
+   .login-anniu{
+	   width:80%;
+		 margin:20px 0 20px 40px;
+	   font-size:18px;
+		 padding:10px 50px;
+		 display:block;
+		 background:rgb(109,185,61);
+		 border:0;
+		 color:white;
+	 }
+	 .login a{
+	   text-decoration:none;
+		 color:white;
+		 margin-left:80px;
+	 }
+	</style>
+</head>
+<body>
+	<div class="container">
+	    <div class="login">
+			  <p>登录小卖部商城</p>
+				<hr>
+				  <input class="uname" type="text" placeholder="请输入用户名">
+				  <input class="upwd" type="text" placeholder="请输入密码">
+					<input id="re-upwd" type="checkbox" name="to-login" checked><label for="re-upwd">记住密码</label>
+					<input id="re-login" type="checkbox" name="to-login"><label for="re-login">自动登录</label>
+				  <input type="button" class="login-anniu" value="登录">
+				<a href="#">忘记密码？</a>
+				<a href="register.html">立即注册</a>
+			</div>
+	</div>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/login.js"></script>
+</body>
+</html>

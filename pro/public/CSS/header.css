@@ -1,0 +1,112 @@
+*{margin:0;padding:0;}
+		 body{width:100%;}
+	  header{width:1200px;margin:0 auto;}
+		  .top{
+			  width:1200px;height:80px;
+				margin:0 auto;
+				background:url(../img/q1.png) no-repeat center; 
+			}
+			.tu01,.c1,.c2{float:left;
+			}
+			.top::after,.c1 ul::after{
+			  content:"";
+				display:block;
+				clear:both;
+			}
+			.tu01 img{
+			  height:80px;
+			}
+			.c1 ul li{
+			  width:156px;
+			  list-style:none;
+				float:left;
+			}
+      .c1 ul li a{
+			  font-size:18px;
+				padding:22px 30px;
+				text-decoration:none;
+			}
+      .c1 ul li a:hover{
+			  font-size:22px;
+			}
+			.c1 ul{
+			  margin:25px 0;
+			}
+			.c1{margin-left:100px;}
+			.c2{
+				margin-top:40px;
+				margin-left:20px;
+			}
+			.c2 a{
+			  font-size:18px;
+        text-decoration:none;
+			}
+      nav{width:1200px;
+			  margin:0 auto;
+				padding-top:20px;
+				position:relative;
+			}
+			nav .n1 .tu02 img{
+			  width:100px;height:60px;
+			}
+      nav .n1 .tu02,nav .n1 .p1,nav .n1,nav .n2{
+			  float:left;
+			}
+			
+			nav::after,nav.n1::after,nav .n3::after{
+			  content:"";
+				display:block;
+				clear:both;
+			}
+			nav .n1 .p1{
+			  width:60px;
+			  font-size:24px;
+				background:#ff0;
+				color:white;
+				font-weight:bold;
+				text-align:center;
+			}
+			nav .n2 input{
+			  height:30px;
+				width:400px;
+        border-radius:5px;
+				border:2px solid #0ff;
+			}
+      nav .n2 button{height:30px;
+			  border-radius:5px;
+				background:#0ff;
+			}
+			nav .n2{
+		   	width:700px;
+			  text-align:center;
+				padding:15px 0;
+			}
+			nav .n3 .a1 img{
+			  width:25px;
+				height:25px;
+				
+			}
+			nav .n3 .a2 img{
+			  width:40px;
+				height:20px;
+			}
+			nav .n3 ul li{
+			  list-style:none;
+				float:left;
+				width:60px;height:30px;
+				position:relative;
+			}
+       
+		  nav .n3 ul{
+			  position:absolute;
+				right:100px;top:0px;
+				text-align:center;
+				padding-top:37px;
+			}
+			nav .n3 ul li a{
+			  text-decoration:none;
+			}
+      nav .n3 ul li b{
+			  position:absolute;
+				top:-2px;left:-2px;
+			}

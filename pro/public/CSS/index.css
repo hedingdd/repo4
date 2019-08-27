@@ -1,0 +1,121 @@
+*{margin:0;padding:0;}
+	  body{width:100%;}
+	  .container{width:1200px;margin:0 auto;}
+		a{text-decoration:none;}
+		#header,#footer{  
+			display: flex;
+			justify-content:center 
+		}
+	  .my_header{width:1250px;height:200px;margin:0 auto;min-width:1200px;}
+		.my_footer{width:1250px;height:300px;margin:0 auto;min-width:1200px;}
+		.lunbo{
+		  width:1200px;height:500px;
+			position:relative;
+			overflow:hidden;
+		}
+    .lunbo ul li img{
+		  width:1200px;
+			height:500px;
+		}
+    .lunbo-img{
+		  display:flex;
+	    justify-content:flex-start;
+			width:4800px;
+		  list-style:none;
+			position:absolute;
+		 }
+    .lunbo a.ck-side{
+		  width:30px;height:80px;
+			position:absolute;
+			border-radius:5px;
+		}
+    .lunbo a.ck-left{
+		  left:10px;top:210px;
+			background:#ddd url("../img/arrow-left.png") no-repeat center center;
+		}
+		.lunbo a.ck-right{
+		  right:10px;top:210px;
+			background:#ddd url("../img/arrow-right.png") no-repeat center center;
+		} 
+		.lunbo-footer{
+		  list-style:none;
+		  position:absolute;
+			bottom:30px;
+			left:550px;
+			padding:0;
+		}
+    .lunbo-footer li{
+		  width:20px;height:20px;
+			border-radius:50%;
+			float:left;
+			background:#fff;
+		}
+		.lunbo-footer li+li{
+		  margin-left:5px;
+		}
+		.lunbo-footer li.active{
+		  background:#f0f;
+		}
+		.index-product{
+		  margin:10px;
+		}
+		.index-product img{
+		  width:30px;height:30px;
+			margin-bottom:-12px;
+		}
+    .index-img img{
+		  width:310px;height:310px;
+			border-radius:50%;
+		}
+    .index-img{
+		 display:flex; 
+		 justify-content:space-around;
+		 text-align:center;
+		}
+		.louceng{
+		  position:relative;
+			overflow:hidden;
+		}
+		.index-price{
+		  width:100px;height:100px;
+			text-align:center;
+			line-height:100px;
+			background:rgba(109,185,61,0.8);
+			color:#fff;
+			font-size:12px;
+			border-radius:50%;
+			margin:0 105px;
+			position:absolute;
+			top:-100px;
+			transition:all 500ms linear;
+		}
+		.louceng:hover .index-price{
+		  top:105px;}
+		.index-foot{
+		  text-align:center;
+			font-size:36px;
+			color:#000;
+			font-weight:bold;
+			margin:20px;
+			transition:all 2s linear;
+		}
+		.index-foot:hover{
+		  background:#f00;
+			color:#fff;
+		}
+		.navbar{
+			position: fixed;
+			top:200px;
+			left:0;
+			border:1px solid gray;
+			display: none;
+		}
+		.navbar li{
+			width: 80px;
+			text-align: center;
+			height: 20px;
+			border:1px solid gray
+		}
+		.hover{
+			background: red;
+		}

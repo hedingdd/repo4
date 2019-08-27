@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-1.11.3.js"></script>
+	<script src="js/header.js"></script>
+	<script src="js/footer.js"></script>
+	<script src="js/detail.js"></script>
+	<style>
+	  *{margin:0;padding:0;}
+		.my_header{width:1250px;height:200px;}
+		.my_footer{width:1250px;height:300px;}
+	   .detail_top{
+			width:1200px;
+			margin:0 auto;
+		 }
+		#container{
+			width:1200px;
+			margin:0 auto;
+		  display:flex;
+			justify-content:space-around;
+		}
+		.detail_left,.detail_right{
+		  width:500px;
+			margin-top:20px;
+		}
+		.detail_left-top{
+		  width:500px;height:500px;
+   		border:1px solid red;
+			position:relative;
+			}
+    .detail_left-top img{
+		  width:500px;height:500px;
+		}
+	  .lg{
+		  width:500px;height:500px;
+			position:absolute;
+			left:500px;
+			top:-1px;
+			border:1px solid red;
+			background-image:url("img/detail02.jpg");
+			background-size:1000px 1000px;
+      opacity:0.9;
+			display:none;
+		}
+		.mask{
+		  width:200px;height:200px;
+			background:green;
+			opacity:0.5;
+			position:absolute;
+			top:0px;left:0px;
+			display:none;
+		}
+		.super-mask{
+		  width:500px;height:500px;
+			position:absolute;
+			left:0px;top:0px;
+		}
+		.detail_left-bottom  img{
+		   width:100px;height:100px;
+		}
+    .detail_left-bottom{
+		  padding:10px;
+		  display:flex;
+      justify-content:space-around;
+			background:#ff0;
+		}
+   .detail_right h3{
+	   margin:0 0 30px 0;
+	 }
+	 .detail_price{
+	   background:#ddd;
+		 padding:10px 20px;
+	 }
+	 .detail_price p{
+	   padding-bottom:15px;
+	 }
+	 .detail_price p span{
+	   color:#00f;
+		 font-weight:bold;
+		 font-size:24px;
+	 }
+	 .detail_active p span{
+	   color:#f00;
+		 font-weight:bold;
+		 font-size:18px;
+	 }
+   .detail_active{
+	   background:#ccc;padding:20px 10px;
+	 }
+	 .detail_active p{
+	   padding-bottom:15px;
+	 }
+	 .detail_number{
+	   background:#ddd;
+		 padding:25px 0;
+     text-align:center;
+	 }
+	 .detail_number button{
+	   width:20px;
+	 }
+	 .detail_number input{
+	   width:10%;
+	 }
+	 .detail_buy{
+	   display:flex;
+		 justify-content:space-between;
+	 }
+   .detail_buy a{
+	   text-decoration:none;
+		 font-size:18px;
+		 background:rgb(109,185,61);
+		 color:#fff;
+		 font-size:18px;
+		 margin-top:30px;
+	 }
+	</style>
+</head>
+<body>
+<header></header>
+  <div class="detail_top">
+    <p>首页>辣条>火爆鸡筋</p>
+		<hr>
+	</div>
+	<div id="container">
+	  <div class="detail_left">
+		   <div class="detail_left-top">
+      <!--  中图片-->
+			    <img src="img/detail02.jpg" alt="">
+      <!-- 			大图片		 -->
+					<div class="lg"></div>
+       <!-- 放大镜 -->
+					<div class="mask"></div>
+       <!-- 		遮罩层		 -->
+					<div class="super-mask"></div>
+			 </div>
+		   <div class="detail_left-bottom">
+          <!--  小图片-->
+					<img src="img/detail02.jpg" alt="">
+					<img src="img/detail03.jpg" alt="">
+					<img src="img/detail04.jpg" alt="">
+					<img src="img/detail05.jpg" alt="">
+			 </div>
+		</div>
+		<div class="detail_right">
+		   <h3>素火爆鸡筋麻辣条零食 24g/包 8090后怀旧食品 小辣条 10包火爆鸡筋(童年喜爱)</h3>
+			 <div class="detail_price">
+			   <p>零售价：<span>￥0.5&nbsp;&nbsp;&nbsp;RMB</span></p>
+				 <p>服务承诺：*绝无过期产品 *存储量足 *价格公道 *出售不退</p>
+			 </div>
+			 <div class="detail_active">
+			   <p>特价优惠活动：*1块钱2包 *2块钱3包 *3块钱4包 *4块钱5包 </p>
+         <p>包邮活动：价格满<span>￥9.9</span>就包邮。全村各地，只要十分钟，就是这么快(只限<span>9:00~16:00</span>,其他时间需要邮费不等)</p>
+				 <p>备注：<span>节假日惊喜不断，快来买吧</span></p>
+			 </div>
+			 <div class="detail_number">
+				   <span>数量：</span>
+				   <button>+</button>
+					 <input type="text" value=1>
+					 <button>-</button>
+				</div>
+				<div class="detail_buy">
+				  <a style="padding:10px 25px" href="#">立即购买</a>
+					<a style="padding:10px 10px" href="#">
+					  <img src="img/product_detail_img7.png" alt="">
+						<span>加入购物车</span>
+					</a>
+					<a style="padding:10px 30px" href="#">
+					  <img src="img/product_detail_img6.png" alt="">
+						<span>收藏</span>
+					</a>
+				</div>
+		</div>
+
+	</div>
+<footer></footer>
+</body>
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+  //图片转换
+  $(".detail_left-bottom").on("mouseenter","img",function(){
+	  $(this).clone().replaceAll(".detail_left-top>img");
+		 //$(".detail_left-top>img").attr("src",$(this).attr("src"));
+		//console.log("url("+$(this).attr('src')+")");
+    $(".lg").css("background-image",'url('+$(this).attr('src')+')');
+	})
+	var $mask=$(".mask");
+	//console.log($mask);
+	//鼠标在遮罩层移入移出效果
+	$(".super-mask").hover(
+	  function(){
+      $mask.css("display","block");
+		},
+     function(){
+      $mask.css("display","none");
+		}
+	)
+  $(".super-mask").hover(
+	   function(){
+      $(".lg").css("display","block");
+		},
+     function(){
+      $(".lg").css("display","none");
+		}
+	)
+  //鼠标移动放大镜效果
+  $(".super-mask").mousemove(function(e){
+	  var left=e.offsetX-100;
+		var top=e.offsetY-100;
+		if(left<0) left=0;
+		else if(left>300) left=300;
+		if(top<0) top=0;
+		else if(top>300) top=300;
+    $mask.css({left,top});
+		$(".lg").css(
+		  "background-position",`-${left*2}px -${top*2}px`
+		);
+	})
+	
+
+  //数量增减功能
+  var div=document.getElementsByClassName("detail_number")[0];
+	var btns=div.getElementsByTagName("button");
+	for(var btn of btns){
+	  btn.onclick=function(){
+		  var btn=this;
+			var span=btn.parentNode.children[2];
+			var n=span.value;
+			if(btn.innerHTML=="+"){
+			  n++;
+			}else if(n>1){
+			  n--;
+			}
+			span.value=n;
+		}
+	}
+</script>
+</body>
+</html>

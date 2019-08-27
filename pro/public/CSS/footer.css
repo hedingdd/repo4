@@ -1,0 +1,32 @@
+footer{width:1200px;margin:0 auto;}
+	  .buttom{
+		 width:100%;
+		 }
+	  .f1,.f2{float:left;}
+	  .f2 ul {list-style:none;}
+     .f2 ul li a{
+		 text-decoration:none;
+		 color:red;
+		 }
+		 .f2 ul li{
+		   padding:5px;
+		 }
+	  .f2{
+	    margin-left:50px;
+	    width:400px;height:213px;
+	    display:flex;
+		justify-content:space-around;
+		align-items:center;
+	  }
+		
+		.f3 .wx img{
+		  width:213px;height:213px;
+		}
+    .f3 .word,.f3 .wx{float:left;}
+		.f3 .word{
+		  margin:60px 80px 20px;
+		}
+		.f3 .word p{
+		  color:#f0f;
+			font-weight:bold;
+		}
